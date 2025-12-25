@@ -2,7 +2,23 @@
 <html>
   <head>
     <base target="_top">
+    <!-- OPEN GRAPH / SOCIAL META -->
+    <meta property="og:title" content="Business Hub" />
+    <meta property="og:description" content="We believe that true entrepreneurship is not just about starting a business—it's about cultivating a mindset." />
+    <meta property="og:url" content="https://bizmartstore.github.io/business-hub" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/bizmart-7an2vg/assets/s386xwjqppi3/BNHS.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Business Hub" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Business Hub" />
+    <meta name="twitter:description" content="Official website of Business Hub" />
+    <meta name="twitter:image" content="https://your-school-banner-or-logo-image-url-here.jpg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <style>
       html, body {
         margin: 0;
@@ -11,7 +27,7 @@
         width: 100%;
         overflow: hidden;
         font-family: Arial, sans-serif;
-        touch-action: none; /* prevent pinch-zoom on mobile */
+        touch-action: none;
       }
 
       .iframe-container {
@@ -23,32 +39,48 @@
 
       .main-iframe {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         border: none;
         pointer-events: auto;
       }
 
-      /* Fixed small white rectangle */
+      /* FIXED FOOTER RECTANGLE */
       .fixed-rectangle {
         position: fixed;
-        bottom: 20px; /* distance from bottom */
-        right: 20px;  /* distance from right */
-        width: 160px;  /* rectangle width */
-        height: 60px; /* rectangle height */
-        background-color: white;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* subtle shadow */
-        z-index: 1000; /* above iframe */
+        bottom: 20px;
+        right: 28px;
+
+        width: clamp(125px, 20vw, 155px);
+        height: clamp(20px, 8vh, 40px);
+
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        z-index: 1000;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 5px; /* optional rounded corners */
-        font-size: 16px;
-        font-weight: bold;
-        color: black;
-        cursor: pointer;
+
+        padding: 8px;
+        text-align: center;
+
+        font-weight: 700;
+        font-size: clamp(12px, 1.2vw, 12px);
+        color: #000000;
+
+        pointer-events: auto;
+        user-select: none;
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 480px) {
+        .fixed-rectangle {
+          bottom: 12px;
+          right: 12px;
+        }
       }
     </style>
   </head>
@@ -60,9 +92,10 @@
       </iframe>
 
       <div class="fixed-rectangle">
-        BUSINESS HUB
+        © 2025 BUSINESS HUB
       </div>
     </div>
   </body>
 
 </html>
+
