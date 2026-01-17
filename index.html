@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- IMPORTANT: DO NOT USE base target -->
-    <!-- <base target="_top">  ❌ REMOVED -->
-
+    <base target="_top">
     <!-- OPEN GRAPH / SOCIAL META -->
     <meta property="og:title" content="Project ITF" />
     <meta property="og:description" content="Illuminating the Future." />
@@ -17,25 +15,26 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PROJECT ITF" />
     <meta name="twitter:description" content="Official website of Project ITF" />
-    <meta name="twitter:image" content="https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/bizmart-7an2vg/assets/6be9lufu3mhj/BNHS2.jpeg" />
+    <meta name="twitter:image" content="https://your-school-banner-or-logo-image-url-here.jpg" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <style>
       html, body {
         margin: 0;
         padding: 0;
-        width: 100%;
         height: 100%;
+        width: 100%;
         overflow: hidden;
         font-family: Arial, sans-serif;
+        touch-action: none;
       }
 
       .iframe-container {
         position: relative;
         width: 100%;
         height: 100%;
-        background: #f4f4f4;
+        overflow: hidden;
       }
 
       .main-iframe {
@@ -44,34 +43,39 @@
         width: 100%;
         height: 100%;
         border: none;
+        pointer-events: auto;
       }
 
-      /* FIXED RECTANGLE (SAFE) */
+      /* FIXED FOOTER RECTANGLE */
       .fixed-rectangle {
         position: fixed;
         bottom: 20px;
         right: 28px;
 
-        width: clamp(130px, 22vw, 160px);
-        height: clamp(28px, 8vh, 40px);
+        width: clamp(132px, 23vw, 162px);
+        height: clamp(20px, 8vh, 40px);
 
-        background: #ffffff;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        border-radius: 8px;
         z-index: 1000;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
+        padding: 8px;
+        text-align: center;
+
         font-weight: 700;
-        font-size: 12px;
+        font-size: clamp(12px, 1.2vw, 12px);
         color: #000000;
 
-        pointer-events: none; /* IMPORTANT: DO NOT BLOCK IFRAME */
+        pointer-events: auto;
         user-select: none;
       }
 
+      /* Mobile adjustments */
       @media (max-width: 480px) {
         .fixed-rectangle {
           bottom: 12px;
@@ -80,14 +84,12 @@
       }
     </style>
   </head>
-
   <body>
     <div class="iframe-container">
-      <iframe
-        class="main-iframe"
-        src="https://my-site-c26k9dlb-sheethappenswithja.wix-vibe.com"
-        allow="fullscreen"
-      ></iframe>
+      <iframe class="main-iframe" 
+        src="https://my-site-c26k9dlb-sheethappenswithja.wix-vibe.com" 
+        allowfullscreen>
+      </iframe>
 
       <div class="fixed-rectangle">
         © 2025 PROJECT ITF
